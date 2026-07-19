@@ -24,12 +24,12 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-content grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] items-center gap-16">
+      <div className="container-content grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] items-center gap-10 lg:gap-16">
         <motion.div
           variants={staggerContainer(0.1)}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center text-center gap-7 lg:items-start lg:text-left"
+          className="order-2 lg:order-1 flex flex-col items-center text-center gap-7 lg:items-start lg:text-left"
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-3">
             <span className="h-px w-8 bg-blue-400" />
@@ -90,7 +90,7 @@ export default function Hero() {
           variants={scaleIn}
           initial="hidden"
           animate="visible"
-          className="relative mx-auto w-full max-w-xs lg:max-w-none aspect-[4/5]"
+          className="order-1 lg:order-2 relative mx-auto w-full max-w-xs lg:max-w-none aspect-[4/5]"
         >
           <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-blue-600 shadow-lift">
             <Image
