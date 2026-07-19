@@ -23,39 +23,40 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-const siteUrl = "https://cheziangelicaw.example.com";
+const siteUrl = "https://cheziangelicaw.example.com"; // Menyesuaikan dengan domain sitemap Anda sebelumnya
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Jery Mechael — HR & People Professional",
+    default: "Jery Mechael — UI/UX Designer & Front-End Developer",
     template: "%s · Jery Mechael",
   },
   description:
-    "Fresh Psychology graduate with hands-on HR Operations experience — recruitment, employee administration, and training coordination. Portfolio & resume.",
+    "Fresh Informatics graduate from Universitas Mercu Buana Yogyakarta with hands-on experience in technical project development, UI/UX design, and front-end system development.",
   keywords: [
     "Jery Mechael",
-    "HR Officer",
-    "People Professional",
-    "Psychology Graduate",
-    "HR Portfolio",
-    "Human Resources",
+    "Jery Mechael Pentagon Lumbantoruan",
+    "UI/UX Designer",
+    "Front-End Developer",
+    "Informatics Graduate",
+    "Web Developer Portfolio",
+    "Universitas Mercu Buana Yogyakarta",
   ],
-  authors: [{ name: "Jery Mechael" }],
+  authors: [{ name: "Jery Mechael Pentagon Lumbantoruan" }],
   openGraph: {
-    title: "Jery Mechael — HR & People Professional",
+    title: "Jery Mechael — UI/UX Designer & Front-End Developer",
     description:
-      "Fresh Psychology graduate with hands-on HR Operations experience — recruitment, employee administration, and training coordination.",
+      "Fresh Informatics graduate from Universitas Mercu Buana Yogyakarta with hands-on experience in technical project development, UI/UX design, and front-end system development.",
     url: siteUrl,
-    siteName: "Jery Mechael",
+    siteName: "Jery Mechael Portfolio",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jery Mechael — HR & People Professional",
+    title: "Jery Mechael — UI/UX Designer & Front-End Developer",
     description:
-      "Fresh Psychology graduate with hands-on HR Operations experience in recruitment, administration, and training coordination.",
+      "Fresh Informatics graduate with hands-on experience in UI/UX design and front-end web development.",
   },
   robots: {
     index: true,
@@ -70,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${sora.variable} ${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
