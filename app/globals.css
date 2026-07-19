@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-background text-foreground font-body antialiased;
+  font-feature-settings: "ss01" on, "cv01" on;
+}
+
+::selection {
+  background-color: #d6cbf7;
+  color: #2e2260;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6cbf7;
+  border-radius: 999px;
+  border: 2px solid #f7f4fc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b7a5f0;
+}
+
+:focus-visible {
+  outline: 2px solid #6a56d6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-content {
+  @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-10;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-lavender-600;
+}
+
+.gradient-text {
+  @apply bg-lavender-gradient bg-clip-text text-transparent;
+}
