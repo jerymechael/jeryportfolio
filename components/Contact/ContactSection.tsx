@@ -18,7 +18,7 @@ const infoCards = [
 
 export default function ContactSection() {
   return (
-   <section id="get-in-touch-section" className="relative pt-8 sm:pt-10 pb-10 sm:pb-14">
+    <section id="get-in-touch-section" className="relative py-24 sm:py-32">
       <div className="container-content">
         <div className="flex flex-col gap-8">
           
@@ -40,7 +40,6 @@ export default function ContactSection() {
                   whileInView="visible"
                   viewport={viewportOnce}
                 >
-                  {/* Warna tombol utama disesuaikan ke biru royal terang yang bold */}
                   <Button
                     href={contactInfo.whatsappHref}
                     size="lg"
@@ -52,7 +51,6 @@ export default function ContactSection() {
                 </motion.div>
               </div>
 
-              {/* Batas bawah grid kartu sejajar sempurna dengan batas bawah Form */}
               <motion.div
                 variants={staggerContainer(0.08)}
                 initial="hidden"
@@ -92,15 +90,14 @@ export default function ContactSection() {
             </motion.div>
           </div>
 
-        {/* Bagian Sosmed diletakkan di bawah batas sejajar */}
-<div className="flex flex-col gap-3 pt-6 border-t border-border/60 max-w-[45%]">
-  <p className="text-sm font-medium text-muted-2">Or reach me directly</p>
-  
-  {/* Wrapper kustom untuk mengubah lingkaran putih ([&_a]) menjadi hitam minimalis */}
-  <div className="[&_a]:bg-neutral-900 [&_a]:text-white [&_a]:border-neutral-800 [&_a:hover]:bg-black [&_a:hover]:text-white [&_a]:transition-all [&_a]:duration-300">
-    <SocialLinks links={socialLinks} />
-  </div>
-</div>
+          {/* Bagian Sosmed */}
+          <div className="flex flex-col gap-3 pt-6 border-t border-border/60">
+            <p className="text-sm font-medium text-muted-2">Or reach me directly</p>
+
+            <div className="[&_ul]:justify-start [&_a]:bg-neutral-900 [&_a]:text-white [&_a]:border-neutral-800 [&_a:hover]:bg-black [&_a:hover]:text-white [&_a]:transition-all [&_a]:duration-300">
+              <SocialLinks links={socialLinks} />
+            </div>
+          </div>
 
         </div>
       </div>
