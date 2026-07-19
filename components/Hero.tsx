@@ -25,11 +25,12 @@ export default function Hero() {
       />
 
       <div className="container-content grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] items-center gap-10 lg:gap-16">
+        {/* TEXT BLOCK 1: eyebrow, name, badge, description */}
         <motion.div
           variants={staggerContainer(0.1)}
           initial="hidden"
           animate="visible"
-          className="order-2 lg:order-1 flex flex-col items-center text-center gap-7 lg:items-start lg:text-left"
+          className="order-1 lg:order-1 lg:col-start-1 lg:row-start-1 flex flex-col items-center text-center gap-7 lg:items-start lg:text-left"
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-3">
             <span className="h-px w-8 bg-blue-400" />
@@ -73,24 +74,14 @@ export default function Hero() {
             Fresh graduate in Informatics from Universitas Mercu Buana Yogyakarta,
             with hands-on experience in technical project development, UI/UX design, and system development.
           </motion.p>
-
-          <motion.div variants={fadeInUp} className="pt-1 relative">
-            <SocialLinks links={socialLinks} variant="pill" />
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.8, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="hidden lg:block absolute left-0 right-[-16rem] top-full mt-10 h-px bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100"
-              style={{ transformOrigin: "left" }}
-            />
-          </motion.div>
         </motion.div>
 
+        {/* PHOTO: order-2 on mobile (below description), right column spanning both rows on desktop */}
         <motion.div
           variants={scaleIn}
           initial="hidden"
           animate="visible"
-          className="order-1 lg:order-2 relative mx-auto w-full max-w-xs lg:max-w-none aspect-[4/5]"
+          className="order-2 lg:order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 relative mx-auto w-full max-w-xs lg:max-w-none aspect-[4/5]"
         >
           <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-blue-600 shadow-lift">
             <Image
@@ -116,6 +107,23 @@ export default function Hero() {
               </span>
             </motion.div>
           </div>
+        </motion.div>
+
+        {/* SOCIAL LINKS: order-3 on mobile (below photo), back under description on desktop */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          className="order-3 lg:order-1 lg:col-start-1 lg:row-start-2 pt-1 relative flex justify-center lg:justify-start"
+        >
+          <SocialLinks links={socialLinks} variant="pill" />
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.8, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:block absolute left-0 right-[-16rem] top-full mt-10 h-px bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100"
+            style={{ transformOrigin: "left" }}
+          />
         </motion.div>
       </div>
     </section>
