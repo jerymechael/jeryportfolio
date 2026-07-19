@@ -29,7 +29,7 @@ export default function Hero() {
           variants={staggerContainer(0.1)}
           initial="hidden"
           animate="visible"
-          className="flex flex-col gap-7"
+          className="flex flex-col items-center text-center gap-7 lg:items-start lg:text-left"
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-3">
             <span className="h-px w-8 bg-blue-400" />
@@ -52,15 +52,15 @@ export default function Hero() {
 
           <motion.div
             variants={fadeInUp}
-            className="inline-flex w-fit items-center gap-3 rounded-full bg-blue-800 pl-3 pr-6 py-2"
+            className="inline-flex w-fit max-w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-2xl sm:rounded-full bg-blue-800 px-5 py-3 sm:pl-3 sm:pr-6 sm:py-2"
           >
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/15">
+            <span className="hidden sm:flex h-6 w-6 items-center justify-center rounded-full bg-white/15">
               <span className="h-2 w-2 rounded-full bg-white" />
             </span>
-            <span className="text-sm sm:text-base font-bold text-white whitespace-nowrap">
+            <span className="text-sm sm:text-base font-bold text-white text-center">
               UI/UX Designer &amp; Front-End Developer
             </span>
-            <span className="h-5 w-px bg-white/30" />
+            <span className="hidden sm:block h-5 w-px bg-white/30" />
             <span className="font-serif italic text-sm sm:text-base text-white/90 whitespace-nowrap">
               IT Graduate
             </span>
