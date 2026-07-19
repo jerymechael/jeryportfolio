@@ -3,10 +3,10 @@ import { experience } from "@/data/experience";
 
 export default function ExperienceSection() {
   return (
-   <section id="experience-section" className="relative pt-12 sm:pt-14 pb-10 sm:pb-14">
+    <section id="experience-section" className="relative pt-8 sm:pt-10 pb-24 sm:pb-32">
       <div className="container-content">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center text-center gap-8 lg:flex-row lg:items-end lg:justify-between lg:text-left">
+          <div className="flex flex-col items-center text-center gap-4 lg:items-start lg:text-left">
             <span className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-blue-600">
               <span className="h-px w-8 bg-blue-400" />
               Experience
@@ -21,13 +21,13 @@ export default function ExperienceSection() {
             <p className="font-serif italic text-xl text-foreground">
               {experience.length} roles
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              
+            <p className="mt-1 text-sm leading-relaxed text-muted text-center lg:text-right">
+              across research, technology, and community organizations.
             </p>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-6 md:gap-0">
+        <div className="mt-16 flex flex-col gap-6">
           {experience.map((entry, index) => (
             <ExperienceItem key={entry.id} entry={entry} index={index} />
           ))}
