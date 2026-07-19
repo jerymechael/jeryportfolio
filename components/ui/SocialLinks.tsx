@@ -30,7 +30,7 @@ export default function SocialLinks({
   variant = "icon",
 }: SocialLinksProps) {
   return (
-    <ul className={cn("flex flex-wrap items-center gap-3", className)}>
+   <ul className={cn("flex flex-nowrap items-center gap-3 overflow-x-auto", className)}>
       {links.map((link) => {
         const Icon = iconMap[link.icon];
         return (
