@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Chezia Angelica Wullur — Portfolio
+# Jery Mechael — Portfolio
 
 A pixel-close, production-ready recreation of the [Framer portfolio](https://cheziangelicaw.framer.website/)
 built with Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, and Framer Motion.
