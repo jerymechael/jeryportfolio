@@ -30,7 +30,7 @@ export default function SocialLinks({
   variant = "icon",
 }: SocialLinksProps) {
   return (
-   <ul className={cn("flex flex-wrap items-center justify-center gap-3", className)}>
+    <ul className={cn("flex flex-nowrap items-center justify-center gap-2 sm:gap-3", className)}>
       {links.map((link) => {
         const Icon = iconMap[link.icon];
         return (
@@ -45,12 +45,12 @@ export default function SocialLinks({
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
               className={cn(
                 variant === "pill"
-                 ? "flex items-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-blue-700 transition-colors"
+                  ? "flex items-center gap-1.5 sm:gap-2 rounded-full bg-blue-600 px-3 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-md hover:bg-blue-700 transition-colors whitespace-nowrap"
                   : "flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-foreground shadow-soft hover:border-lavender-300 hover:text-lavender-600 hover:shadow-card transition-colors",
                 iconClassName
               )}
             >
-              <Icon size={variant === "pill" ? 16 : 18} strokeWidth={1.9} />
+              <Icon size={variant === "pill" ? 15 : 18} strokeWidth={1.9} />
               {variant === "pill" && <span>{labelOverride[link.icon] ?? link.label}</span>}
             </motion.a>
           </li>
