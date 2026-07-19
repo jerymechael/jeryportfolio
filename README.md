@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Chezia Angelica Wullur — Portfolio
 
 A pixel-close, production-ready recreation of the [Framer portfolio](https://cheziangelicaw.framer.website/)
@@ -111,3 +112,6 @@ vercel --prod
   attributes are used throughout the nav, accordion, and social links.
 - Scroll-triggered animations use `whileInView` with `viewport={{ once: true }}`
   so they don't re-fire and cost re-renders on every scroll.
+=======
+# jeryportfolio
+>>>>>>> 7ec98732f11ff08559277b860fb41b79953cf480
