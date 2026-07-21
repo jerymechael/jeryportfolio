@@ -27,7 +27,8 @@ export default function ExperienceSection() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-6">
+        {/* Jarak atas list experience diperkecil dari mt-16 menjadi mt-8 sm:mt-10 */}
+        <div className="mt-8 sm:mt-10 flex flex-col gap-6">
           {experience.map((entry, index) => (
             <ExperienceItem key={entry.id} entry={entry} index={index} />
           ))}
