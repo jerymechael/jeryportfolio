@@ -2,9 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { validateContactForm, type ContactFormValues } from "@/lib/validation";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+eexport async function POST(req: NextRequest) {
+  const apiKey = process.env.RESEND_API_KEY;
 
-export async function POST(req: NextRequest) {
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is not configured.");
+  }
+
+  const resend = new Resend(apiKey);
+  // lanjutkan kode yang sudah ada...{
   try {
     const body = (await req.json()) as Partial<ContactFormValues>;
 
