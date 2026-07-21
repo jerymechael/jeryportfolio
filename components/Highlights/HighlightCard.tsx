@@ -18,9 +18,9 @@ export default function HighlightCard({ entry, index }: HighlightCardProps) {
       whileInView="visible"
       viewport={viewportOnce}
       transition={{ delay: index * 0.06 }}
-      className="group relative overflow-hidden rounded-2xl border border-border bg-white shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300"
+      className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-lavender-50">
+      <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-lavender-50">
         <Image
           src={entry.image}
           alt={entry.title}
@@ -29,7 +29,7 @@ export default function HighlightCard({ entry, index }: HighlightCardProps) {
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
         />
       </div>
-      <div className="p-4 text-center">
+      <div className="flex flex-1 items-center justify-center p-4 text-center">
         <p className="text-sm font-medium text-foreground text-balance">{entry.title}</p>
       </div>
     </motion.article>
