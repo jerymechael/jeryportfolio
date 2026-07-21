@@ -66,3 +66,13 @@ body {
 .gradient-text {
   @apply bg-lavender-gradient bg-clip-text text-transparent;
 }
+
+/* Sembunyikan scrollbar untuk horizontal scroll di mobile (mis. HighlightsSection) */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
