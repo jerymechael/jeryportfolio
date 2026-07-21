@@ -1,4 +1,5 @@
 import HighlightCard from "@/components/Highlights/HighlightCard";
+import HighlightsCarouselMobile from "@/components/Highlights/HighlightsCarouselMobile";
 import { highlights } from "@/data/highlights";
 
 export default function HighlightsSection() {
@@ -15,31 +16,15 @@ export default function HighlightsSection() {
           </p>
         </div>
 
-        {/* Mobile: horizontal scroll snap | sm+: grid rapi & sejajar tinggi */}
-        <div
-          className="
-            mt-14
-            flex sm:grid
-            gap-5 sm:gap-6
-            overflow-x-auto sm:overflow-visible
-            snap-x snap-mandatory sm:snap-none
-            -mx-6 px-6 sm:mx-0 sm:px-0
-            scrollbar-hide
-            sm:grid-cols-2 lg:grid-cols-3
-            items-stretch
-          "
-        >
+        {/* Mobile: infinite loop carousel */}
+        <div className="mt-14">
+          <HighlightsCarouselMobile items={highlights} />
+        </div>
+
+        {/* Desktop/tablet: grid biasa, sejajar tinggi */}
+        <div className="hidden sm:grid mt-14 gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
           {highlights.map((entry, index) => (
-            <div
-              key={entry.id}
-              className="
-                snap-start shrink-0
-                w-[80%] xs:w-[70%] sm:w-auto
-                flex
-              "
-            >
-              <HighlightCard entry={entry} index={index} />
-            </div>
+            <HighlightCard key={entry.id} entry={entry} index={index} />
           ))}
         </div>
       </div>
