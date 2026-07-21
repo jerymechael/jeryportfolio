@@ -18,10 +18,14 @@ export default function SkillBadge({ name, icon, color, bg, className }: SkillBa
 
   return (
     <motion.div
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -4, scale: 1.02 }}
+      whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 350, damping: 22 }}
       className={cn(
-        "flex w-fit flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-white px-6 py-4 text-center shadow-soft hover:border-blue-300 hover:shadow-card transition-all duration-200 cursor-default select-none",
+        "flex h-full w-full min-h-[104px] sm:min-h-[112px] flex-col items-center justify-center gap-2",
+        "rounded-2xl border border-border bg-white px-3 sm:px-6 py-4",
+        "text-center shadow-soft hover:border-blue-300 hover:shadow-card",
+        "transition-colors duration-200 cursor-default select-none",
         className
       )}
     >
@@ -33,7 +37,7 @@ export default function SkillBadge({ name, icon, color, bg, className }: SkillBa
       >
         <IconComponent size={17} strokeWidth={1.8} className={color} />
       </span>
-      <span className="font-body text-sm font-medium text-foreground text-balance whitespace-nowrap">
+      <span className="font-body text-sm font-medium text-foreground text-balance leading-snug line-clamp-2 break-words">
         {name}
       </span>
     </motion.div>
