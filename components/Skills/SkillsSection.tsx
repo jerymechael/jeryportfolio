@@ -10,11 +10,16 @@ export default function SkillsSection() {
   return (
     <section id="skills-tools-section" className="relative pt-8 sm:pt-10 pb-10 sm:pb-14 bg-background">
       <div className="container-content">
-        <SectionTitle
-          eyebrow="Skills & Tools"
-          title="Skills and tools I bring, every day."
-          eyebrowStyle="lines"
-        />
+        
+        {/* Pembungkus SectionTitle untuk membuat posisinya center di HP dan rata kiri di PC */}
+        <div className="flex flex-col text-center md:text-left items-center md:items-start w-full">
+          <SectionTitle
+            eyebrow="Skills & Tools"
+            title="Skills and tools I bring, every day."
+            eyebrowStyle="lines"
+            className="items-center md:items-start text-center md:text-left"
+          />
+        </div>
 
         <div className="mt-8 sm:mt-16 flex flex-col">
           {skillGroups.map((group, index) => (
