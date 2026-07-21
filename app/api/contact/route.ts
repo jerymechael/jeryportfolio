@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { validateContactForm, type ContactFormValues } from "@/lib/validation";
 
-eexport async function POST(req: NextRequest) {
+export async function POST(req: NextRequest) {
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey) {
